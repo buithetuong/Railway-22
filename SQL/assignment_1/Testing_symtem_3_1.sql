@@ -12,10 +12,11 @@ VALUES
 						('Giao vien The Duc');
 
 INSERT INTO positions(position_name) 
-VALUES 					(N'Giao vien chu nhiem'),
-						(N'Giao vien bo mon'),
-						(N'Giao vien hop đong'),
-						(N'Giao vien chinh thuc'); 
+VALUES 					
+						('Giao vien chu nhiem'),
+						('Giao vien bo mon'),
+						('Giao vien hop dong'),
+						('Giao vien chinh thuc'); 
 
 INSERT INTO `accounts`(email							, username			, fullname				, department_id	, 		position_id, 		create_date)
 VALUES 				('luuvanthanh@gmail.com'		, 'thanhthieugia'	,'Luu Van Thanh'			,   '2'				,   '2'				,'2020-03-05'),
@@ -49,10 +50,10 @@ VALUES 							(	2		,    9		,'2019-03-05'),
 								(	5		,    5		,'2020-03-09'),
 								(	1		,    8		,'2020-03-10'),
 								(	1		,    10		,'2020-03-28'),
-								(	3		,    3		,'2020-04-06'),
-								(	8		,    5		,'2020-04-07'),
+								(	8		,    1		,'2020-04-06'),
+								(	4		,    2		,'2020-04-07'),
 								(	7		,    4		,'2020-04-08'),
-								(	2		,    9		,'2020-04-09'),
+								(	2		,    7		,'2020-04-09'),
 								(	3		,    6		,'2020-04-10');
 
 INSERT INTO type_questions (type_name			) 

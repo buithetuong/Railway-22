@@ -26,7 +26,7 @@ CREATE TABLE departments
 CREATE TABLE positions
 (
 	 position_id 	TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	position_name 	ENUM("Dev","Test","Scrum Master", "PM") DEFAULT "Dev"
+	position_name 	ENUM("Giao vien chu nhiem","Giao vien bo mon","Giao vien hop dong", "Giao vien chinh thuc") DEFAULT "Giao vien hop dong"
 );
 
 CREATE TABLE accounts
