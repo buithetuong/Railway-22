@@ -17,8 +17,7 @@ WHERE 		department_name = 'Giao vien Van';
 SELECT 		*
 FROM 		`accounts`
 WHERE 		LENGTH(fullname) = (SELECT MAX(LENGTH(fullname))
-FROM 		`accounts`)
-ORDER BY 	fullname;
+FROM 		`accounts`);
 -- Cách 2 
 SELECT *, LENGTH(fullname)
 FROM 		`accounts`
@@ -28,12 +27,14 @@ LIMIT 		1;
 
 
 -- Question 5: Lấy ra thông tin account có full name dài nhất và thuộc phòng ban có id= 3
-SELECT *
+SELECT 		*
 FROM 		`accounts`
-GROUP BY 	fullname
-HAVING 		department_id = 3
-ORDER BY 	LENGTH(fullname) DESC 
-LIMIT 		1; 
+WHERE 		LENGTH(fullname) = 
+(
+	SELECT MAX(LENGTH(fullname))
+	FROM 	`accounts` WHERE department_id = 3
+);
+
 
 
 -- Question 6: Lấy ra tên group đã tham gia trước ngày 20/12/2019
@@ -65,8 +66,7 @@ LIMIT 		5;
 -- Question 10: Đếm số nhân viên thuộc department có id = 2
 SELECT COUNT(department_id)
 FROM 		`accounts`
-GROUP BY 	department_id
-HAVING 		department_id = 2;
+WHERE 		department_id = 2;
 -- Question 11: Lấy ra nhân viên có tên bắt đầu bằng chữ "D" và kết thúc bằng chữ "g"
 SELECT 		fullname
 FROM 		`accounts`
